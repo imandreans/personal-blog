@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<section>
+  <header>
+    <h1>{{blog['title']}}</h1>
+    <button onclick="history.back()">Back</button>
+  </header>
+  <h2 class="publishing-date">{{blog['publishing_date']}}</h2>
+  <p class="content">{{blog['content']}}</p>
+</section>
+{% endblock %}

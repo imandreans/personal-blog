@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
+
+* {
+  font-family: "Boogaloo";
+}
+
+h1 {
+  font-family: "Barriecito";
+  font-size: 3rem;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  textarea{
+    
+    height: 380px;
+  }
+  input, textarea{
+    padding: 10px;
+    font-size: 1.8rem;
+      border: 4px solid black;
+      border-radius: 4px;
+  }
+}
+
+a{
+    color: black;
+    font-size: 1.8rem;
+}
+.article-name a {
+  font-size: 1.6rem;
+  color: black;
+}
+.publishing-date {
+  color: #757575;
+}
+.content {
+  font-size: 1.8rem;
+  white-space: pre-wrap;
+  color: gray;
+}
+
+#features{
+display: flex;
+gap: 20px;
+    a{
+        color: #757575;
+    }
+}
+body {
+  header{
+    margin-bottom: 10px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  * {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+  }
+}
+article {
+  box-sizing: border-box;
+  width: 660px;
+  height: 700px;
+  border: 4px solid black;
+  border-radius: 8px;
+  padding: 20px;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      min-width: 59px;
+      min-height: 38px;
+      /* padding: 10px; */
+      font-size: 1.8rem;
+      background-color: transparent;
+      border: none;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+  }
+
+  ul li {
+    width: inherit;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+
+<header>
+  <h1 class="title">Personal Blog</h1>
+  <a href="{{url_for('new')}}"> Add </a>
+</header>
+<section>
+  <ul>
+    {% for blog in list_blogs %}
+    <li>
+      <h2 class="article-name">
+        <a href="{{url_for('view_article', id=blog['id'])}}">
+          {{blog['title']}}
+        </a>
+      </h2>
+      <div id="features">
+        <a href="{{url_for('edit_article', id=blog['id'])}}">Update</a>
+
+        <a href="{{url_for('delete_article', id=blog['id'])}}">Delete</a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

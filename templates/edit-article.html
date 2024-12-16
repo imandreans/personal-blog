@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+    <h1>Update Article</h1>
+    <button onclick="history.back()">Back</button>
+</header>
+<form action="{{url_for('update_article', id=blog['id'])}}" method="POST">
+
+    <input type="text" name="title" id="title" value="{{blog['title']}}">
+    <!-- <input type="date" name="date-updated" id="date-updated"> -->
+    <textarea name="content" id="content">{{blog['content']}}</textarea>
+    <input type="submit" value="Update">
+</form>
+
+{% endblock %}

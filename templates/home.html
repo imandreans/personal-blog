@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+<header>
+  <h1 class="title">Personal Blog</h1>
+  <a href="{{url_for('admin')}}"> Log In </a>
+</header>
+<section>
+  <ul>
+    {% for blog in list_blogs %}
+    <li>
+      <h2 class="article-name">
+        <a href="{{url_for('view_article', id=blog['id'])}}">
+          {{blog['title']}}
+        </a>
+      </h2>
+      <h2 class="publishing-date">{{blog['publishing_date']}}</h2>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

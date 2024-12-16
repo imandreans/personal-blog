@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<header>
+<h1>New Article</h1>
+<button onclick="history.back()">Back</button>
+</header>
+<!-- form to receive the title and content of new blogs -->
+<form action="/publish" method="post">
+
+    <input type="text" name="title" placeholder="Blog's title">
+    <textarea name="content" id="content" placeholder="What's on your mind?"></textarea>
+    <!-- when the submit button is clicked, both values will be sent to route '/publish' -->
+    <input type="submit" value="Publish">
+</form>
+{% endblock %}
