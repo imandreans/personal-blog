@@ -71,6 +71,8 @@ def update_article(id: int):
     Blogs().update_blog(int(id), title, content)
     return redirect(url_for('admin'))
 
+if __name__ == "__main__":
+    app.run()
 # def url_back()
 # @app.route('/test')
 # def test():
