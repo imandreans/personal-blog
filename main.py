@@ -38,13 +38,16 @@ def admin():
 @app.route('/publish', methods=['POST'])
 @auth_required
 def publish():
-    # title and content is received
-    title = request.form['title']
-    content = request.form['content']
-    # new blog is being added to the json file
-    Blogs().add_blog(title, content)
-    # redirect to admin page
-    return redirect(url_for('admin'))
+    try:
+        # title and content is received
+        title = request.form['title']
+        content = request.form['content']
+        # new blog is being added to the json file
+        Blogs().add_blog(title, content)
+        # redirect to admin page
+        return redirect(url_for('admin'))
+    except Exception as e:
+        return e
 
 @app.route('/article/<id>')
 def view_article(id: int):
