@@ -52,6 +52,7 @@ def view_article(id: int):
     return render_template('article.html', blog=blog)
 
 @app.route('/delete/<id>')
+@auth_required
 def delete_article(id: int):
     Blogs().delete_blog(int(id))
     return redirect(url_for('admin'))
