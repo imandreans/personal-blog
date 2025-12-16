@@ -60,11 +60,11 @@ class Blogs:
     def display(self):
         for i in self.__fetch_blogs():
             print(i['id'], "=", i['title'])
-if __name__ == '__main__':
-    b = Blogs()
-    b.display()
-    b.update_blog(3, 'judul', 'isi')
-    b.display()
+# if __name__ == '__main__':
+#     b = Blogs()
+#     b.display()
+#     b.update_blog(3, 'judul', 'isi')
+#     b.display()
     # b.delete_blog(2)
     # print('='*10)
     # b.display()

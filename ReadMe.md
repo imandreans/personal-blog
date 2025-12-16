@@ -1,6 +1,10 @@
 # Personal Blog
 A Website that you can use as your blog or archive for other writings, like poem or novel.
-# Features
+## Tech Stack
+- Python
+- Flask
+- Basic Authentication
+## Features
 - Log In: log in as admin gives you features like add, delete, and update article.
 - Add: Add new article.
 - Delete: Delete selected article.
